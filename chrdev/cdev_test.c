@@ -8,7 +8,7 @@ int main(int argc, char **argv)
     char buf[256];
     printf("char device testing.\n");
     fd = open("/dev/my_char_dev", O_RDWR);           //打开字符设备
-    if (fd == 0)
+    if (fd == -1 )
     {
         printf("the char dev file cannot be opened.\n");
         return 1;
